@@ -12,7 +12,7 @@ def group_by_city(data):
     cities = []
     sorted_city = {}
     for x in data:
-        cities.append(x['city'])
+        cities.append(x.get('city', False))
     uniq_cities = set(cities)
     for city in uniq_cities:
         citizens = []
